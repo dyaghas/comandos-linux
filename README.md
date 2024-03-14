@@ -10,7 +10,6 @@ man ls
 ```
 ## ls
 list, exibe todas as pastas e arquivos no diretório atual. Exemplo:
-
 ```bash
 ls -l
 ```
@@ -18,7 +17,6 @@ O parâmetro -l é opcional e exibe diversas caracteristicas de cada diretório 
 
 ## cd
 Change directory, acessa o diretório especificado: 
-
 ```bash
 cd Downloads/exemplo
 ```
@@ -26,7 +24,6 @@ Aceita diversos parâmetros como .. por exemplo, movendo para o diretório anter
 
 ## pwd
 print working directory, exibe o diretório atual
-
 ```bash
 pwd
 
@@ -35,7 +32,6 @@ pwd
 
 ## mkdir e rmdir
 mkdir cria um diretório com o nome especificado e rmdir remove um diretório.
-
 ```bash
 mkdir diretorio/de/destino
 rmdir diretorio/de/destino
@@ -45,7 +41,6 @@ rmdir diretorio/de/destino
 ## nano, touch, vi
 
 Os três comandos servem para criar um arquivo. Touch cria um arquivo vazio, nano abre um editor amigável para digitar o conteúdo e vi permite modificações mais avançadas e consequentemente exige mais conhecimento.
-
 ```bash
 touch arquivo.txt
 nano arquivo.txt
@@ -56,7 +51,6 @@ vi arquivo.txt
 
 ## cat
 Concatenate, comando que exibe o conteúdo de um ou mais arquivos juntos. Esse comando não realiza nenhuma modificação no arquivo por si só, apenas exibe o conteúdo concatenado.
-
 ```bash
 cat arquivo1.txt arquivo2.txt
 
@@ -70,7 +64,6 @@ Limpa o terminal.
 
 ##cp e mv
 copy e move. Servem para copiar e mover arquivos, a sintaxe é bem semelhante.
-
 ```bash
 cp arquivo.txt diretorio/de/destino
 mv arquivo.txt diretorio/de/destino
@@ -78,7 +71,6 @@ mv arquivo.txt diretorio/de/destino
 
 ## wc
 Esse comando conta a quantidade de linhas, palavras e bytes em um arquivo ou outro input. Exemplo
-
 ```bash
 wc arquivo.txt
 
@@ -94,7 +86,6 @@ Desliga ou reboota o sistema, podendo ser utilizado com diversos parâmetros.
 
 ## more e less
 Comandos utilizados para exibir conteúdo de texto. Podem ser utilizados em junção com outros comandos como cat. Less possui mais funcionalidades do que more.
-
 ```bash
 # comando cat e less
 cat | less
@@ -102,7 +93,6 @@ cat | less
 
 ## find
 Procura por arquivos no diretório atual e seus filhos, por exemplo:
-
 ```bash
 # parâmetros para encontrar todos os arquivos com extensão .txt
 find -name "*.txt"
@@ -123,7 +113,6 @@ Os grupos são owner, group e others respectivamente.
 
 ## history
 Exibe os comandos previamente digitados no terminal em ordem cronológica a partir do mais recente. Os comandos são exibidos com um número ao lado que ao ser digitado com uma !, executa tal comando, exemplo:
-
 ```bash
 # output do comando history
 ...
@@ -136,12 +125,32 @@ Exibe os comandos previamente digitados no terminal em ordem cronológica a part
 ```
 ## who
 Exibe detalhes dos usuários que estão logados atualmente no sistema como nome e horário de login.
+```bash
+who
+```
+
+## head
+Exibe as primeiras linhas do conteúdo de um arquivo, o padrão é 10 linhas.
+```bash
+head arquivo.txt
+```
+
+## tail
+Semelhante ao comando head, exibindo as últimas linhas.
+```tail
+tail arquivo.txt
+```
+
+## sort
+Ordena as linhas de um arquivo em ordem alfabética por padrão. Diversos parâmetros podem ser utilizados para alterar o comportamento da ordenação.
+```bash
+sort arquivo.txt
+```
 
 ## bash script
 É possivel criar arquivos com scripts em bash, por exemplo:
 
 crie um arquivo .sh e insira o script:
-
 ```bash
 #!/bin/bash
 
