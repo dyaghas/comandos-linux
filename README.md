@@ -91,3 +91,48 @@ Dispensa comentários
 
 ## shutdown
 Desliga ou reboota o sistema, podendo ser utilizado com diversos parâmetros.
+
+## more e less
+Comandos utilizados para exibir conteúdo de texto. Podem ser utilizados em junção com outros comandos como cat. Less possui mais funcionalidades do que more.
+
+```bash
+# comando cat e less
+cat | less
+```
+
+## find
+Procura por arquivos no diretório atual e seus filhos, por exemplo:
+
+```bash
+# parâmetros para encontrar todos os arquivos com extensão .txt
+find -name "*.txt"
+```
+
+## chmod
+Altera as permissões de um arquivo ou diretório. Há diversas formas de utilizar esse comando como a seguinte:
+
+```bash
+chmod 735 arquivo.txt
+```
+
+Esse comando dá as permissões rwx-wxr-x, mas como eu sei o que significa esses números? Cada um dos três números representa as permissões de um grupo em binário. 1 significa que aquela permissão foi dada e 0, que não foi dada aquele usuário ou grupo, ou seja:
+7 = 111 (rwx) Permissão para read, write e execute
+3 = 011 (-wx) Permissão para write e execute
+5 = 101 (r-x) Permissão para read e execute
+Os grupos são owner, group e others respectivamente.
+
+## history
+Exibe os comandos previamente digitados no terminal em ordem cronológica a partir do mais recente. Os comandos são exibidos com um número ao lado que ao ser digitado com uma !, executa tal comando, exemplo:
+
+```bash
+# output do comando history
+...
+72 history
+73 ls
+74 rmdir
+
+# executa o comando na linha 73
+!73
+```
+## who
+Exibe detalhes dos usuários que estão logados atualmente no sistema como nome e horário de login.
