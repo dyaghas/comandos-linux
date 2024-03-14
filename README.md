@@ -136,3 +136,72 @@ Exibe os comandos previamente digitados no terminal em ordem cronológica a part
 ```
 ## who
 Exibe detalhes dos usuários que estão logados atualmente no sistema como nome e horário de login.
+
+## bash script
+É possivel criar arquivos com scripts em bash, por exemplo:
+
+crie um arquivo .sh e insira o script:
+
+```bash
+#!/bin/bash
+
+echo "Calculadora de soma de números"
+
+# Lê o primeiro input
+echo "Digite o primeiro número:"
+read num1
+
+# Lê o segundo input
+echo "Digite o segundo número:"
+read num2
+
+# Realiza o cálculo
+sum=$((num1 + num2))
+
+# Exibe o resultado
+echo "The sum of $num1 and $num2 is: $sum"
+```
+
+execute o script através do arquivo, por exemplo: ./script-name.sh
+
+Segue um exemplo de script um pouco mais avançado
+
+```bash
+#!/bin/bash
+
+echo "Responda as seguintes perguntas para sabermos se você pode ter acesso ao arquivo"
+
+echo "Qual é a sua idade?"
+read age
+
+echo "Você nasceu em que ano?"
+read bornyear
+
+# Variáveis globais
+currentyear=$(date +%Y)
+password=senhaSenha@
+filename=senha.txt
+
+if [ $age -ge 18 ]; then
+  if [ $((currentyear - bornyear) -eq $age) ]; then
+    echo "Você pode acessar o arquivo $filename"
+    if [ ! -e "$filename" ]; then
+      # Cria um arquivo com o nome $filename e conteúdo $password
+      echo "$password" > "$filename"
+    fi
+    # Permite apenas a leitura do arquivo para todos os grupos
+    chmod 444 "$filename"
+  else
+    echo "O ano de nascimento não condiz com sua idade"
+      # Remove todas as permissões do arquivo caso ele exista
+      if [ -e "$filename" ]; then
+        chmod 000 "$filename"
+      fi
+  fi
+else
+  echo "Você não pode acessar o arquivo"
+  if [ -e "$filename" ]; then
+    chmod 000 "$filename"
+  fi
+fi
+```
