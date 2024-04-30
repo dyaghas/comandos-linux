@@ -69,6 +69,9 @@ cp arquivo.txt diretorio/de/destino
 mv arquivo.txt diretorio/de/destino
 ```
 
+## nl - number lines
+Conta as linhas em um arquivo.
+
 ## wc
 Esse comando conta a quantidade de linhas, palavras e bytes em um arquivo ou outro input. Exemplo
 ```bash
@@ -78,8 +81,20 @@ wc arquivo.txt
 2  33  140  arquivo.txt
 ```
 
+## ln - link
+Cria links entre arquivos.
+
+## env
+Mostra todas as variáveis de ambiente.
+
+## tr - translate
+Comando que lê um input, realiza transformações nos dados e escreve o resultado.
+
+## grep
+Procura por padrões em um texto e exibe as linhas que o contenha.
+
 ## exit
-Dispensa comentários
+Dispensa comentários.
 
 ## shutdown
 Desliga ou reboota o sistema, podendo ser utilizado com diversos parâmetros.
