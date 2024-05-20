@@ -133,6 +133,22 @@ Comando que permite combinar e manipular comandos de forma eficiente, por exempl
 cat files_to_delete.txt | xargs rm
 ```
 
+## cut
+É usado para extrair partes especificas de linhas de texto de arquivos ou de entrada. A sintaxe padrão é:
+```bash
+cut [opções] [arquivo]
+```
+-f (field): Especifica quais campos (colunas) extrair.
+-d (delimiter): Define o delimitador que separa os campos (padrão é TAB).
+-c (character): Especifica quais caracteres extrair.
+
+Alguns exemplos:
+
+```bash
+cut -c3 arquivo.txt - seleciona a terceira coluna
+cut -d ',' -f 1 arquivo.txt - Usa a virgula como delimitador e seleciona a primeira coluna através do -f 1
+```
+
 ## chmod
 Altera as permissões de um arquivo ou diretório. Há diversas formas de utilizar esse comando como a seguinte:
 
