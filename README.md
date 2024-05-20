@@ -139,7 +139,9 @@ cat files_to_delete.txt | xargs rm
 cut [opções] [arquivo]
 ```
 -f (field): Especifica quais campos (colunas) extrair.
+
 -d (delimiter): Define o delimitador que separa os campos (padrão é TAB).
+
 -c (character): Especifica quais caracteres extrair.
 
 Alguns exemplos:
@@ -163,8 +165,11 @@ read var1 var2 var3 - armazena em várias variáveis
 Suponha que exista um arquivo notas.txt com o seguinte conteúdo:
 
 Alice 90
+
 Bob 85
+
 Carol 95
+
 Dave 88
 
 ```bash
