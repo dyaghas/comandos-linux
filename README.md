@@ -149,6 +149,30 @@ cut -c3 arquivo.txt - seleciona a terceira coluna
 cut -d ',' -f 1 arquivo.txt - Usa a virgula como delimitador e seleciona a primeira coluna através do -f 1
 ```
 
+## read
+Faz a leitura de input como um scan em outras linguagens. Exemplos:
+```bash
+read Nome - lê o que foi digitado até o usuário pressionar enter e armazena na variável Nome
+read -n2 Idade - lê dois caracteres sem a necessidade de apertar enter
+read var1 var2 var3 - armazena em várias variáveis
+```
+
+## awk
+É um comando muito poderoso para trabalhar com o processamento de texto. Por exemplo:
+
+Suponha que exista um arquivo notas.txt com o seguinte conteúdo:
+
+Alice 90
+Bob 85
+Carol 95
+Dave 88
+
+```bash
+# esse comando soma a nota na segunda coluna de todas as linhas e printa os valores.
+awk '{soma += $2} END {print soma/NR}' notas.txt
+```
+
+
 ## chmod
 Altera as permissões de um arquivo ou diretório. Há diversas formas de utilizar esse comando como a seguinte:
 
