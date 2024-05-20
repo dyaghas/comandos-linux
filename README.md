@@ -93,6 +93,13 @@ Comando que lê um input, realiza transformações nos dados e escreve o resulta
 ## grep
 Procura por padrões em um texto e exibe as linhas que o contenha.
 
+-e permite especificar múltiplos padrões no grep. Cada padrão deve ter um -e antes.
+-i ignora letras maiúsculas ou minúsculas
+-v inverte, exibe as linhas que NÃO possuem o padrão especificado no grep
+-c conta o número de linhas que possui o padrão especificado
+-n precede cada linha que possui o padrão com uma numeração
+-l exibe apenas os arquivos que contém o padrão especificado
+
 ## exit
 Dispensa comentários.
 
@@ -111,6 +118,13 @@ Procura por arquivos no diretório atual e seus filhos, por exemplo:
 ```bash
 # parâmetros para encontrar todos os arquivos com extensão .txt
 find -name "*.txt"
+```
+
+## xargs
+Comando que permite combinar e manipular comandos de forma eficiente, por exemplo:
+```bash
+#Considerando que o arquivo files_to_delete.txt possui nomes de vários arquivos que serão deletados, xargs rm vai ler cada linha através do cat e deletar esses arquivos.
+cat files_to_delete.txt | xargs rm
 ```
 
 ## chmod
